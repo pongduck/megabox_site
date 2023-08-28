@@ -23,6 +23,12 @@
 
   <!-- 구글아이콘 -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 </head>
 <body>
   <header id="header">
@@ -77,15 +83,84 @@
         </div>
       </div>
     </div>
-    <div class="slider">
-      <img src="img/ele_Banner_6.webp" alt="엘리멘탈">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/banner_1.webp" alt="엘리멘탈"></div>
+        <div class="swiper-slide"><img src="img/banner_2.webp" alt=""></div>
+        <div class="swiper-slide"><img src="img/banner_3.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="img/banner_5.jpg" alt=""></div>      
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
+  <div class="ico">
+    <div class="table">
+      <div class="cell"><a href="#"><img src="img/ico-main-customer.png" alt=""><p>고객센터</p></a></div>
+      <div class="cell"><a href="#"><img src="img/ico-main-qna.png" alt=""><p>자주 묻는 질문</p></a></div>
+      <div class="cell"><a href="#"><img src="img/ico-main-faq.png" alt=""><p>1:1 문의</p></p></a></div>
+      <div class="cell"><a href="#"><img src="img/ico-main-group.png" alt=""><p>단체/대관문의</p></a></div>
+      <div class="cell"><a href="#"><img src="img/ico-main-lost.png" alt=""><p>분실물 문의 접수</p></a></div>
+      <div class="cell"><a href="#"><img src="img/ico-main-boutique.png" alt=""><p>더부티크 프라이빗 대관문의</p></a></div>
+    </div>
+  </div>
+
+  <div id="popup_layer">
+    <div class="popup_box">
+        <!--팝업 컨텐츠 영역-->
+        <div class="popup_cont">
+            <h2>공지</h2>
+            <p>
+            ㅁㄻㅇㄴㄻㅇㄴㅁㄻㅇㄻㅇㄻㄹㅇㅇㄹㄴㅇㄻㄴㅇㄻㄴㅇㄻㄴㄻㄴㅇㅁㄴㄻㄷㄴ
+            </p>
+        </div>
+        <!--팝업 버튼 영역-->
+        <div class="popup_btn">
+            <a href="javascript:closePop();">닫기</a>
+        </div>
+    </div>
+  </div>
+
+  <footer>
+
+  </footer>
+
   <!-- js -->
+  <link rel="stylesheet" href="js/script.js">
+
   <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script> -->
   <script src="js/modernizr-custom.js"></script>
   <script src="js/ie-checker.js"></script>
-  <script src="js/jquery.min_1.12.4.js"></script>
+  <scrip src="js/jquery.min_1.12.4.js"></script>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+  var swiper = new Swiper(".mySwiper", {
+  navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+  },
+});
+
+
+//그냥 닫기버튼 스크립트
+function closePop() { 
+	document.getElementById("popup_layer").style.display = "none";
+}
+$(function(){
+	$(".popup_box").draggable({containment:'parent', scroll:false}); // 레이어 팝업 창 드래그 가능
+	//{containment:'parent', scroll:false} 화면 영역 밖으로 드래그 안됌.
+                
+	if(document.cookie.indexOf("popToday=close") < 0 ){      // 쿠키 저장여부 체크
+		document.getElementById("popup_layer").style.display = "block";
+		}else {
+		document.getElementById("popup_layer").style.display = "none"; 
+		}
+	});
+
+  </script>
 </body>
 </html>
