@@ -95,6 +95,129 @@
     </div>
   </section>
 
+  <section class="movie">
+    <div class="container">
+      <div class="row">
+        <div class="movie">
+          <h2 class="ir_so">최신 영화 정보</h2>
+          <div class="movie_title">
+            <ul>
+              <li class="active"><a href="#">박스오피스</a></li>
+              <li><a href="#">최신개봉작</a></li>
+              <li><a href="#">상영예정작</a></li>
+              <li><a href="#">큐레이션</a></li>
+            </ul>
+          </div>
+          <div class="movie_chart">
+            <div class="chart_cont1">
+              <div>
+                <div class="poster">
+                  <figure>
+                    <img src="img/poster1.jpg"  alt="오펜하이머">
+                  </figure>
+                  <div class="rank"><strong>1</strong></div>
+                  <div class="mx">
+                    <span>Dolby</span>
+                    <span>MX</span>
+                  </div>
+                </div>
+                <div class="infor">
+                  <h3><span>15세</span><strong>오펜하이머</strong></h3>
+                  <div class="infor_btn">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_cont2">
+              <div>
+                <div class="poster">
+                  <figure>
+                    <img src="img/poster2.jpg"  alt="타켓">
+                  </figure>
+                  <div class="rank"><strong>2</strong></div>
+                  <div class="mx">
+                    <span>MX</span>
+                  </div>
+                </div>
+                <div class="infor">
+                  <h3><span>15세</span><strong>타켓</strong></h3>
+                  <div class="infor_btn">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_cont3">
+              <div>
+                <div class="poster">
+                  <figure>
+                    <img src="img/poster3.jpg"  alt="콘크리트">
+                  </figure>
+                  <div class="rank"><strong>3</strong></div>
+                  <div class="mx">
+                    <span>Dolby</span>
+                    <span>MX</span>
+                  </div>
+                </div>
+                <div class="infor">
+                  <h3><span>15세</span><strong>콘크리트 유토피아</strong></h3>
+                  <div class="infor_btn">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_cont4">
+              <div>
+                <div class="poster">
+                  <figure>
+                    <img src="img/poster4.jpg"  alt="달짝찌근해">
+                  </figure>
+                  <div class="rank"><strong>14</strong></div>
+                  <div class="mx">
+                    <span>MX</span>
+                  </div>
+                </div>
+                <div class="infor">
+                  <h3><span>12세</span><strong>달짝찌근해</strong></h3>
+                  <div class="infor_btn">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart_cont5">
+              <div>
+                <div class="poster">
+                  <figure>
+                    <img src="img/poster5.jpg"  alt="엘리멘탈">
+                  </figure>
+                  <div class="rank"><strong>5</strong></div>
+                  <!-- <div class="mx">
+                    <span>Dolby</span>
+                    <span>MX</span>
+                  </div> -->  
+                </div>
+                <div class="infor">
+                  <h3><span>ALL</span><strong>엘리멘탈</strong></h3>
+                  <div class="infor_btn">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="ico">
     <div class="table">
       <div class="cell"><a href="#"><img src="img/ico-main-customer.png" alt=""><p>고객센터</p></a></div>
@@ -145,22 +268,10 @@
   },
 });
 
-
 //그냥 닫기버튼 스크립트
 function closePop() { 
 	document.getElementById("popup_layer").style.display = "none";
 }
-$(function(){
-	$(".popup_box").draggable({containment:'parent', scroll:false}); // 레이어 팝업 창 드래그 가능
-	//{containment:'parent', scroll:false} 화면 영역 밖으로 드래그 안됌.
-                
-	if(document.cookie.indexOf("popToday=close") < 0 ){      // 쿠키 저장여부 체크
-		document.getElementById("popup_layer").style.display = "block";
-		}else {
-		document.getElementById("popup_layer").style.display = "none"; 
-		}
-	});
-
   </script>
 </body>
 </html>
